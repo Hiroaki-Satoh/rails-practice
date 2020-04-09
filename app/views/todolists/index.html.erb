@@ -1,0 +1,10 @@
+ <h1>投稿一覧</h1>
+	<!-- ループ処理 (投稿データの数だけ繰り返す)-->
+   <% @lists.each do |list| %>
+      <p>タイトル</p>
+      <span><%= list.title %>
+      	<!-- リンクの設定 <%=link_to list.title, "/todolists/#{list.id}" %> のURLを名前付きルートに変更する↓ -->
+      	<%=link_to list.title, todolist_path(list.id) %>
+      </span>
+   <% end %>
+   <!-- ******************************* -->
