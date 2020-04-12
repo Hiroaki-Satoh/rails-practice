@@ -60,3 +60,9 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# Refileの追加(画像投稿用gem)
+gem "refile", require: "refile/rails", github: 'manfe/refile'
+
+# MiniMagickの追加(画像加工用gem サイズ調整など)
+gem "refile-mini_magick"
